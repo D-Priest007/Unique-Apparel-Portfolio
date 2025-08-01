@@ -1,0 +1,157 @@
+/* GENERAL STYLES */
+body {
+    margin: 0; /* Remove default body margin */
+    font-family: 'Poppins', sans-serif; /* Set a modern, clean font for the body */
+    background-color: #ffffff; /* Default background color */
+    color: #333; /* Default text color */
+}
+
+/* NEWSLETTER SECTION STYLES */
+.newsletter-section {
+    background-color: #fff; /* White background for this section */
+    padding: 80px 20px; /* Generous padding on top/bottom and some on sides */
+    text-align: center; /* Center all content within this section */
+}
+
+.newsletter-content {
+    max-width: 600px; /* Limit the width of the content for readability */
+    margin: 0 auto; /* Center the content block horizontally */
+}
+
+.newsletter-title {
+    font-family: 'DM Serif Display', serif; /* Use the elegant serif font for the title */
+    font-size: 38px;
+    color: #70816C; /* Dark, muted green for the title text */
+    margin-bottom: 15px;
+}
+
+.newsletter-description {
+    font-size: 16px;
+    color: #a0a0a0; /* Lighter gray for the description */
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Form styles (reused and slightly adjusted from previous example ) */
+.subscribe-form {
+    display: flex;
+    background-color: #F8F9FD; /* Very light gray background for the form */
+    border-radius: 50px; /* Pill shape */
+    padding: 8px;
+    max-width: 500px;
+    margin: 0 auto; /* Center the form */
+}
+
+.subscribe-input {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: transparent; /* Transparent background to show the form's color */
+}
+
+.subscribe-button {
+    border: none;
+    outline: none;
+    background-color: #A8BBA3; /* Soft green color for the button */
+    color: white;
+    font-size: 16px;
+    padding: 12px 25px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.subscribe-button:hover {
+    background-color: #8fa885; /* Darker green on hover */
+}
+
+/* FOOTER SECTION STYLES */
+.site-footer {
+    background-color: #70816C; /* The main dark green background for the footer */
+    color: #e0e0e0; /* Light text color for contrast */
+    padding: 60px 40px; /* Padding around the entire footer */
+}
+
+/* Use CSS Grid for a flexible and responsive column layout */
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Create responsive columns */
+    gap: 40px; /* Space between the grid columns and rows */
+    max-width: 1200px; /* Limit the max width of the footer content */
+    margin: 0 auto; /* Center the grid */
+    margin-bottom: 40px; /* Space between the grid and the copyright text */
+}
+
+.footer-column {
+    padding: 0 15px; /* Add some horizontal padding to each column */
+}
+
+/* Special styling for the first column with the logo */
+.about-column {
+    padding-right: 30px; /* Give the about column a bit more space on its right */
+}
+
+.footer-logo {
+    max-width: 150px; /* Control the size of the logo */
+    margin-bottom: 20px; /* Space below the logo */
+}
+
+.footer-text {
+    font-family: 'Poppins', sans-serif; /* Use Poppins font for the footer text */
+    font-size: 14px;
+    line-height: 1.7;
+    color: #FFFFFF; /* White text for better contrast */
+}
+
+.footer-heading {
+    font-family: 'DM Serif Display', serif; /* Use the serif font for headings */
+    font-size: 22px;
+    color: #ffffff; /* White color for headings */
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+/* Styling for the lists of links */
+.footer-links, .footer-contact {
+    list-style: none; /* Remove default bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li, .footer-contact li {
+    margin-bottom: 12px; /* Space between each link/contact item */
+}
+
+.footer-links a {
+    color: #e0e0e0; /* Light color for links */
+    text-decoration: none; /* Remove underline from links */
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ffffff; /* Make link brighter on hover */
+}
+
+/* Styling for the contact list with icons */
+.footer-contact li {
+    display: flex; /* Align icon and text side-by-side */
+    align-items: center;
+    font-size: 14px;
+}
+
+.footer-contact i {
+    margin-right: 12px; /* Space between the icon and the text */
+    font-size: 16px;
+    width: 20px; /* Give icons a fixed width for alignment */
+}
+
+/* Styling for the copyright text at the bottom */
+.footer-copyright {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid #7a8a78; /* A subtle line to separate it */
+    font-size: 13px;
+    color: #FFFFFF80;
+}
