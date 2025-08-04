@@ -1,0 +1,362 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+   display: flex;
+   flex-direction: column;
+}
+
+.background-wrapper {
+    background: url(Assets/image\ 4.png) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    height: 80vh;
+    width: 100%;
+    overflow: hidden;
+
+}
+
+.background-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    padding: 2rem;
+}
+
+.nav {
+    font-family: "Poppins", sans-serif;
+    background-color: #70816c;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+    border: 1px solid rgba(168, 187, 163, 0.1);
+    border-radius: 10px;
+    box-shadow: inset 0 4px 8px rgba(168, 187, 163, 0.3);
+    position: fixed;
+    top: 0;
+    margin: 20px;
+    width: 95%;
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    cursor: pointer;
+}
+
+.nav .tabs ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.nav .tabs ul li a {
+    text-decoration: none;
+    color: #A8BBA3;
+    padding: 10px 15px;
+    display: block;
+}
+
+.nav-icons {
+    gap: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-icons img {
+    cursor: pointer;
+}
+
+.hero-section h1 {
+    font-family: "DM Serif Display", serif;
+    font-size: 80px;
+    width: 1000px;
+    color: #A8BBA3;
+    margin-top: 200px;
+}
+
+.hero-section p {
+    font-family: "Poppins", sans-serif;
+    font-size: 23px;
+    width: 550px;
+    color: white;
+    margin-top: 40px;
+}
+
+.order-btn {
+    font-family: "Poppins", sans-serif;
+    margin-top: 90px;
+    padding: 20px 30px;
+    border-radius: 10px;
+    color: white;
+    background-color: #A8BBA3;
+    border: none;
+    cursor: pointer;
+}
+
+.order-btn:hover {
+    background-color: white;
+    color: #A8BBA3;
+}
+
+.order-btn:active {
+    background-color: #70816c;
+    color: white;
+}
+
+.footnote {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    background-color: #A8BBA3;
+    height: 20vh;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.footnote .fn-div {
+    margin: 0 auto;
+    display: flex;
+    width: 1285px;
+    justify-content: space-between;
+}
+
+.footnote .fn-div div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-size: 20px;
+}
+
+.extension {
+    margin-top: 50px;
+}
+
+.discover {
+    display: flex;
+    color: #70816c;
+    text-align: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.discover h1 {
+    font-family: "DM Serif Display", serif;
+    text-transform: uppercase;
+    font-size: 40px;
+}
+
+.discover p {
+    font-family: "Poppins", sans-serif;
+    max-width: 670px;
+    text-align: center;
+    margin: 0 auto;
+    text-align: justify;
+    text-transform: capitalize;
+    font-size: 15px;
+    margin-top: 15px;
+}
+
+.trending {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1400px;
+    text-align: center;
+    align-items: center;
+}
+
+.image-grid {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.image-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.image-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.image-card:hover img {
+    transform: scale(1.05);
+}
+
+.overlay {
+    font-family: "Poppins", sans-serif;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    transition: opacity 0.3s ease;
+    text-transform: capitalize;
+}
+
+.overlay:hover {
+    opacity: 1;
+}
+
+.overlay button {
+    font-family: "Poppins", sans-serif;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: white;
+    color: black;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-transform: capitalize;
+    transition: background-color 0.3s ease;
+}
+
+.overlay button:hover {
+    background-color: #70816c;
+}
+
+.overlay button:active {
+    color: white;
+}
+
+.trending .text {
+    font-family: "DM Serif Display", serif;
+    text-transform: uppercase;
+    color: #70816c;
+    font-weight: 700;
+    font-size: 40px
+}
+
+.categories {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: 40px;
+    max-width: 1400px;
+    text-align: center;
+    align-items: center;
+}
+
+.categories-img {
+    display: flex;
+    gap: 20px;
+}
+
+.categories .text {
+    font-family: "DM Serif Display", serif;
+    text-transform: uppercase;
+    color: #70816c;
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.view-more {
+    font-family: "Poppins", sans-serif;
+   text-align: right;
+   max-width: 1720px;
+   bottom: 40px;
+   margin-top: 50px;
+   margin-bottom: 20px;
+}
+
+.view-more a {
+    text-decoration: none;
+    color: #70816c;
+}
+
+.ext2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    /* margin-top: 50px; */
+    margin: 0 auto;
+    width: 80%;
+    padding-top: 50px;
+}
+
+.overlay2 {
+    font-family: "Poppins", sans-serif;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: rgba(0, 0, 0, 0.6); */
+    color: white;
+    /* opacity: 0; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    transition: opacity 0.3s ease;
+    text-transform: capitalize;
+}
+
+.overlay2:hover {
+    opacity: 1;
+}
+
+.free-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.overlay2 button {
+    font-family: "Poppins", sans-serif;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: white;
+    color: black;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-transform: capitalize;
+    transition: background-color 0.3s ease; 
+}
+
+.overlay2 button:hover {
+    background-color: #70816c;
+
+}
+
+.overlay2 button:active {
+    color: white;
+}
