@@ -2,7 +2,7 @@
 body {
     margin: 0; /* Remove default body margin */
     font-family: 'Poppins', sans-serif; /* Set a modern, clean font for the body */
-    background-color: #5D6D5B; /* The dark green background color from the image */
+    background-color: #70816C; /* The dark green background color from the image */
 }
 
 p {
@@ -11,6 +11,162 @@ p {
     line-height: 1.6; /* Set line height for better readability */
     font-weight: 500; /* Use a medium font weight for clarity */
 }
+
+h1 {
+    font-family: 'DM Serif Display', serif;
+    font-weight: 400; /* Use a lighter font weight for headings */
+    font-size: 40px; /* Set a larger font size for headings */
+    line-height: 100%; /* Ensure headings take full line height */
+    letter-spacing: 0%; /* No letter spacing for headings */
+    color: #FFFFFF; /* White color for headings */
+}
+
+/* General body styling */
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #7A8774;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+/* Container to wrap all content and set a max-width */
+.container {
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Header title styling */
+header h1 {
+    font-family: 'Lora', serif;
+    font-size: 2.5rem;
+    letter-spacing: 0.2em;
+    text-align: left;
+    margin-bottom: 2rem;
+    font-weight: 400;
+}
+
+/* Main content area styling */
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+/* "About Us" section styling */
+.about-section {
+    display: grid; /* Use CSS Grid for a two-column layout */
+    grid-template-columns: 1fr 1fr; /* Create two columns of equal width */
+    gap: 2rem;
+    align-items: center;
+}
+
+/* "About Us" text block styling */
+.about-text {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.about-text p {
+    margin-bottom: 1.5rem;
+}
+
+/* Image gallery container styling */
+.image-gallery {
+    display: grid; /* Use CSS Grid for the images */
+    grid-template-columns: repeat(3, 1fr); /* Create three equal columns for the images */
+    gap: 1rem; /* Space between images */
+}
+
+/* Common styling for all gallery images */
+.gallery-img {
+    width: 100%; /* Make image fill the grid cell */
+    height: 350px; /* Set a fixed height for all images */
+    object-fit: cover; /* Ensure images cover the area without distortion */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Testimonials section container styling */
+.testimonials-section {
+    display: grid; /* Use CSS Grid for a responsive card layout */
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+    gap: 1.5rem;
+}
+
+/* Individual testimonial card styling */
+.testimonial-card {
+    background-color: #FFFFFF; /* Changed to pure white */
+    color: #555; /* Lighter text color for the quote */
+    border-radius: 15px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Star rating styling */
+.stars {
+    color: #333; /* Darker color for stars for contrast */
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+/* Quote text styling */
+.quote {
+    font-style: italic;
+    flex-grow: 1; /* Pushes the author to the bottom */
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+/* Author section styling (image and name) */
+.author {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: bold;
+    color: #333; /* Darker color for the author name */
+}
+
+.author img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+/* Responsive Design using Media Queries */
+@media (max-width: 992px) {
+    .about-section,
+    .testimonials-section {
+        grid-template-columns: 1fr; /* Stack columns on top of each other */
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .image-gallery {
+        /* On mobile, keep the 3-column grid for images as it looks good, but you could change it */
+        gap: 0.5rem; /* Reduce gap on smaller screens */
+    }
+
+    .gallery-img {
+        height: 250px; /* Reduce image height on smaller screens */
+    }
+}
+
 
 /* Main container for the whole page */
 .about-page-container {
@@ -69,19 +225,7 @@ p {
     display: block; /* Remove any extra space below the image */
 }
 
-/* Specific positioning for the gallery images to create the collage effect */
-.img-1 {
-    grid-column: 1 / 2; /* Span from column line 1 to 2 */
-    grid-row: 1 / 3; /* Span from row line 1 to 3 (making it taller) */
-}
-.img-2 {
-    grid-column: 2 / 3; /* Span from column line 2 to 3 */
-    grid-row: 1 / 2; /* Occupy the first row */
-}
-.img-3 {
-    grid-column: 3 / 4; /* Span from column line 3 to 4 */
-    grid-row: 2 / 6; /* Occupy the second row */
-}
+
 
 /* TESTIMONIALS SECTION STYLES */
 .testimonials-section {
