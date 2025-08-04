@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Orders - Checkout</title>
+    <link rel="stylesheet" href="shipping.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>My Orders</h1>
+        <nav class="checkout-nav">
+            <a href="#">Cart</a>
+            <a href="#" class="active">Shipping</a>
+            <a href="#">Payment</a>
+        </nav>
+    </header>
+
+    <main class="checkout-grid">
+        <!-- Left Column: Shipping Details Form -->
+        <section class="shipping-details">
+            <form>
+                <div class="form-section">
+                    <h2>Contact Info</h2>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" placeholder="Phone Number">
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="newsletter">
+                        <label for="newsletter">Keep me up to date on news and exclusive offers</label>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h2>Shipping Address</h2>
+                    <div class="form-group">
+                        <input type="text" id="full-name" placeholder="Full Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="street-address" placeholder="Street Address">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group select-group">
+                            <select id="city">
+                                <option selected disabled>City</option>
+                            </select>
+                        </div>
+                        <div class="form-group select-group">
+                            <select id="state">
+                                <option selected disabled>State</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group select-group">
+                            <select id="country">
+                                <option selected disabled>Country</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="zip-code" placeholder="Zip Code">
+                        </div>
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="save-address">
+                        <label for="save-address">Save Address for future use</label>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h2>Delivery Method</h2>
+                    <div class="delivery-options">
+                        <div class="delivery-option">
+                            <input type="radio" id="standard" name="delivery" checked>
+                            <label for="standard">Standard Shipping (5 Days ) <span>FREE</span></label>
+                        </div>
+                        <div class="delivery-option">
+                            <input type="radio" id="exclusive" name="delivery">
+                            <label for="exclusive">Exclusive Shipping (2 Days) <span>$20</span></label>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+        <!-- Right Column: Order Summary -->
+        <aside class="order-summary">
+            <div class="discount-section">
+                <input type="text" placeholder="Discount Code">
+                <button type="button">Apply</button>
+            </div>
+
+            <div class="summary-card">
+                <h3>Order Summary</h3>
+                <div class="summary-details">
+                    <div class="summary-item">
+                        <span>Items</span>
+                        <span>7</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Sub Total</span>
+                        <strong>$499.99</strong>
+                    </div>
+                    <div class="summary-item">
+                        <span>Taxes</span>
+                        <strong>$00.00</strong>
+                    </div>
+                    <div class="summary-item">
+                        <span>Shipping</span>
+                        <strong>$00.00</strong>
+                    </div>
+                    <div class="summary-item">
+                        <span>Discount Code</span>
+                        <strong>$00.00</strong>
+                    </div>
+                </div>
+                <div class="summary-total">
+                    <span>Total</span>
+                    <strong>$499.99</strong>
+                </div>
+            </div>
+            <button class="checkout-btn">Proceed to Checkout</button>
+        </aside>
+    </main>
+</div>
+
+</body>
+</html>
