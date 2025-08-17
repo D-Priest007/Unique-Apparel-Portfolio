@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unique Apparel Payment Page</title>
+    <link rel="stylesheet" href="order.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <header>
+            <nav>
+                <div class="nav">
+                    <div class="logo">
+                        <img src="assets/logo.png" alt="LOGO">
+                    </div>
+                
+                    <div class="tabs">
+                        <ul>
+                            <li>
+                                <a href="home.html">Home</a>
+                            </li>
+                            <li>
+                                <div class="active-tab">
+                                    <a href="gallery.html">Gallery</a>
+                                    <div> </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="home.html#about-section">About Us</a>
+                            </li>
+                            <li>
+                                <a href="home.html#contact-section">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                
+                    <div class="nav-icons">
+                        <div><img src="assets/Search Icon.png" alt="Search"></div>
+                        <div><img src="assets/Cart icon.png" alt="Cart"></div>
+                        <div><img src="assets/User Icon.png" alt="User"></div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+<div class="div">
+<h2>My Orders</h2>
+  <div class="tabs">
+    <span><a href="cart.html">Cart</a></span>
+    <span><a href="shipping.html">Shipping</a></span>
+    <span class="active"><a href="#">Payment</a></span>
+  </div>
+<div class="container">
+    <form>
+      <section>
+        <h4>Name on Card</h4>
+        <input type="text" placeholder="Cardholder Name" required>
+      </section>
+      <section>
+        <h4>Card Number</h4>
+        <div class="card-row">
+          <input type="text" required>
+          <div class="card-icons">
+            <img src="Assets/mastercard.png" alt="Mastercard">
+            <img src="Assets/visa.png" alt="Visa">
+            <img src="Assets/verve.png" alt="Verve">
+          </div>
+        </div>
+      </section>
+
+      <!--  -->
+      <section>
+        <div class="row">
+          <div class="half">
+            <h4>Expiration Date</h4>
+            <div class="row">
+              <select>
+                <option>MM</option>
+              </select>
+              <select>
+                <option>YY</option>
+              </select>
+            </div>
+          </div>
+          <div class="half">
+            <h4>CVV</h4>
+            <input type="text" placeholder="CVV" required>
+          </div>
+        </div>
+      </section>
+      <section class="checkboxes">
+        <label class="checkbox">
+          <input type="checkbox">
+          Same as Billing Address
+        </label>
+        <label class="checkbox">
+          <input type="checkbox">
+          Save Card information for future use
+        </label>
+      </section>
+    </form>
+  <div class="summary">
+      <div class="discount">
+        <form action=""><input type="text" placeholder="Discount Code"/></form>
+        <button>Apply</button>
+      </div>
+      <div class="order-summary">
+        <div class="os"><h4>Order Summary</h4></div>
+        <p><span>Items</span><span>7</span></p>
+        <p><span>Sub Total</span><span>$499.99</span></p>
+        <p><span>Taxes</span><span>$0.00</span></p>
+        <p><span>Shipping</span><span>$0.00</span></p>
+        <p><span>Discount Code</span><span>$0.00</span></p>
+        <p class="total"><span>Total</span><span>$499.99</span></p>
+        <a href="#"><button class="checkout">Confirm and Pay</button></a>  
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+    <!-- FOOTER SECTION -->
+    <footer class="site-footer">
+        <div class="footer-grid">
+            
+            <!-- Column 1: Logo and Brand Statement -->
+            <div class="footer-column about-column">
+                <img src="images/logo.png" alt="Unique Apparel Logo" class="footer-logo">
+                <p class="footer-text">
+                    Every Piece is a statement: designed with bold silhouettes, refined fabrics and timeless versatility. From sharply tailored classics to daring contemporary layers, Unique Apparel merges fashion artistry with everyday wearability.
+                </p>
+            </div>
+            
+            <!-- Column 2: Social Links -->
+            <div class="footer-column">
+                <h3 class="footer-heading">Socials</h3>
+                <ul class="footer-links">
+                    <li><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
+                    <li><a href="https://twitter.com/" target="_blank">Twitter</a></li>
+                    <li><a href="https://www.whatsapp.com/" target="_blank">WhatsApp</a></li>
+                    <li><a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
+                </ul>
+            </div>
+            
+            <!-- Column 3: About Links -->
+            <div class="footer-column">
+                <h3 class="footer-heading">About</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Order Page</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <!-- Column 4: Contact Information -->
+            <div class="footer-column">
+                <h3 class="footer-heading">Contact</h3>
+                <ul class="footer-contact">
+                    <li><i class="fas fa-phone"></i> +234 809 829 3000</li>
+                    <li><i class="fas fa-phone"></i> +234 901 924 8205</li>
+                    <li><i class="fas fa-envelope"></i> info@uniqueapparel</li>
+                    <li><i class="fas fa-map-marker-alt"></i> No 12 Timber Estate, Ogui Junction</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Copyright notice at the very bottom of the footer -->
+        <div class="footer-copyright">
+            <p>Copyright © 2025 Unique Apparel. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

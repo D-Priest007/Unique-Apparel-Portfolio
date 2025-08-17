@@ -55,6 +55,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 3rem;
+    
 }
 
 /* "About Us" section styling */

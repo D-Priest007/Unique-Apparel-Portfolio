@@ -1,0 +1,548 @@
+body{
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  /* min-height: 100vh; */
+  /* justify-content: center; */
+}
+/* header{
+  background-image: url(/Assets/Images/background.png);
+  background-size: cover;
+  background-position: center;
+  height: 100px;
+  opacity: 0.8;
+  position: relative;
+} */
+
+.div {
+  margin-top: 200px;
+}
+
+.nav {
+    font-family: "Poppins", sans-serif;
+    background-color: #70816c;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 80px;
+    border: 1px solid rgba(168, 187, 163, 0.1);
+    border-radius: 10px;
+    box-shadow: inset 0 4px 8px rgba(168, 187, 163, 0.3);
+    position: fixed;
+    top: 0;
+    margin: 20px;
+    width: 90%;
+    backdrop-filter: blur(10px);
+    z-index: 99;
+}
+
+.active-tab {
+    position: relative;
+}
+
+.active-tab div {
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: #A8BBA3;
+    transition: width 0.3s ease;
+    border-radius: 50px;
+}
+
+.logo {
+    cursor: pointer;
+}
+
+.nav .tabs ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.nav .tabs ul li a {
+    text-decoration: none;
+    color: #A8BBA3;
+    padding: 10px 15px;
+    display: block;
+}
+
+.nav-icons {
+    gap: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-icons img {
+    cursor: pointer;
+}
+
+h2{
+  text-align: center;
+  color: #70816C;
+  margin-bottom: 35px;
+  font-family: "DM Serif Display", serif;
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+.tabs{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 40px 10px;
+}
+.tabs span{
+  margin: 0 20px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 5px;
+}
+.tabs span a{
+  text-decoration: none;
+  color: #A8BBA3;
+  font-weight: bold;
+}
+.tabs .active{
+  border-color: #5E6C58;
+}
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  gap: 30px;
+  width: 90%;
+}
+
+.containerr{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 40px auto;
+  height: 92vh;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  gap: 30px;
+  width: 90%;
+}
+
+.containerr .shop{
+  height: fit-content;
+}
+
+.head{
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 30px;
+  font-family: Poppins, sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem; 
+  color: #70816C;
+  background-color: #f0f0f0;
+  padding: 10px;
+  margin: 20px 0;
+  border-radius: 10px;
+  width: 100%;
+}
+.headd{
+  margin-right: auto;
+}
+.product-details{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding: 10px;
+  margin: 15px 0;
+  border-radius: 7px;
+  width: 100%;
+  gap: 13px;
+}
+.product-img{
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.quantity-controls{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  height: 0px;
+  background-color: #ffffff;
+}
+.no{
+  border: solid #f0f0f0 3px;
+  background-color: #ffffff;
+  padding: 5px;
+}
+.summary{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  /* justify-content: space-between; */
+}
+.discount{
+  flex: 1 1 300px;
+  position: relative;
+  display: inline-block;
+}
+.order-summary{
+  flex: 1 1 300px;
+  position: relative;
+}
+.order-summaryy{
+  flex: 1 1 300px;
+  position: relative;
+  margin-bottom: 100rem;
+}
+.discount form input{
+  position: relative;
+  width: 85%;
+  border-radius: 50px;
+  background: #F8F9FD;
+  margin-top: 20px;
+  border: none;
+  padding: 10px;
+}
+.discount button{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin-top: 20px;
+  border-radius: 50px;
+  background: #A8BBA3;
+  color: white;
+  width: 100px;
+  height: 35px;
+  cursor: pointer;
+}
+.discount button:hover{
+  background-color: #70816C;
+}
+.order-summary,
+.order-summaryy{
+  background-color: #f0f0f0;
+  padding: 15px;
+  border-radius: 10px;
+}
+.order-summary p,
+.order-summaryy p{
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0;
+}
+.order-summary .total,
+.order-summaryy .total{
+  font-weight: bold;
+  margin-top: 30px;
+}
+.checkout{
+  width: 100%;
+  background-color: #a3b59f;
+  padding: 12px;
+  border-radius: 6px;
+  color: #ffffff;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.checkout:hover{
+  background-color: #70816C;
+}
+.os,
+.oss{
+  position: absolute;
+  top: -45px;
+}
+h4{
+  font-size: 1rem;
+  color: #70816C;
+  margin-bottom: 10px;
+}
+input:focus{
+  outline: none;
+}
+button{
+  /* padding: 10px 20px; */
+  background-color: #a3b59f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.shop{
+  width: 50%;
+  height: 30vh;
+}
+section form{
+  margin-bottom: 30px;
+}
+input[type="text"]{
+  flex: 1;
+  padding: 10px;
+  border: none;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select{
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #f0f0f0;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+  transition: border 0.3s;
+}
+input:focus,
+select:focus{
+  border-color: #70816C;
+  outline: none;
+}
+.row{
+  display: flex;
+  gap: 10px;
+}
+.row select,
+.row input{
+  flex: 1;
+}
+.half{
+  flex: 1;
+}
+.delivery-option{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  background-color: #f7f7f7;
+  padding: 15px;
+  border-radius: 6px;
+  border: 1px solid #70816C;
+  cursor: pointer;
+  transition: border 0.3s;
+  width: 100%;
+}
+.delivery-option:hover{
+  border-color: #70816C;
+}
+/*.delivery-option input{
+  margin: 0;
+}*/
+.card-row{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+.card-row input{
+  flex: 1;
+}
+.card-icons{
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.card-icons img{
+  width: 36px;
+  height: auto;
+  /* object-fit: contain; */
+}
+.checkboxes{
+  display: flex;
+  gap: 50px;
+}
+.checkbox{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: #555;
+}
+/* FOOTER SECTION STYLES */
+.site-footer {
+    background-color: #70816C; /* The main dark green background for the footer */
+    color: #e0e0e0; /* Light text color for contrast */
+    padding: 60px 40px; /* Padding around the entire footer */
+}
+
+/* Use CSS Grid for a flexible and responsive column layout */
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Create responsive columns */
+    gap: 40px; /* Space between the grid columns and rows */
+    max-width: 1200px; /* Limit the max width of the footer content */
+    margin: 0 auto; /* Center the grid */
+    margin-bottom: 40px; /* Space between the grid and the copyright text */
+}
+
+.footer-column {
+    padding: 0 15px; /* Add some horizontal padding to each column */
+}
+
+/* Special styling for the first column with the logo */
+.about-column {
+    padding-right: 30px; /* Give the about column a bit more space on its right */
+}
+
+.footer-logo {
+    max-width: 150px; /* Control the size of the logo */
+    margin-bottom: 20px; /* Space below the logo */
+}
+
+.footer-text {
+    font-family: 'Poppins', sans-serif; /* Use Poppins font for the footer text */
+    font-size: 14px;
+    line-height: 1.7;
+    color: #FFFFFF; /* White text for better contrast */
+}
+
+.footer-heading {
+    font-family: 'DM Serif Display', serif; /* Use the serif font for headings */
+    font-size: 22px;
+    color: #ffffff; /* White color for headings */
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+/* Styling for the lists of links */
+.footer-links, .footer-contact {
+    list-style: none; /* Remove default bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li, .footer-contact li {
+    margin-bottom: 12px; /* Space between each link/contact item */
+}
+
+.footer-links a {
+    color: #e0e0e0; /* Light color for links */
+    text-decoration: none; /* Remove underline from links */
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ffffff; /* Make link brighter on hover */
+}
+
+/* Styling for the contact list with icons */
+.footer-contact li {
+    display: flex; /* Align icon and text side-by-side */
+    align-items: center;
+    font-size: 14px;
+}
+
+.footer-contact i {
+    margin-right: 12px; /* Space between the icon and the text */
+    font-size: 16px;
+    width: 20px; /* Give icons a fixed width for alignment */
+}
+
+/* Styling for the copyright text at the bottom */
+.footer-copyright {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid #7a8a78; /* A subtle line to separate it */
+    font-size: 13px;
+    color: #FFFFFF80;
+}
+
+
+
+@media (max-width: 768px){
+  nav{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2%;
+  }
+  nav li{
+  display: inline-block;
+  }
+  nav a{
+  color: #A8BBA3;
+  text-decoration: none;
+  font-size: 0.8rem;
+  }
+  nav i{
+  height: 10px;
+  color: #FFFFFF;
+  }
+   .shop{
+    width: 100%;
+   }
+  .logo img{
+    width: 90px;
+    height: auto;
+  }
+  .footlogo,
+  .footlogo img{
+    align-self: center;
+  }
+  .footlogo{
+    margin-right: 0px;
+  }
+  .container,
+  .containerr {
+    flex-direction: column;
+    width: 85%;
+  }
+  .containerr{
+    flex-direction: row;
+    height: 1160px;
+  }
+  .product-details{
+    width: 100%;
+    gap: 2px;
+  }
+  .product-details span{
+    font-size: 13px;
+  }
+  .product-img{
+    width: 35px;
+    height: auto;
+  }
+  .tabs{
+    align-items: center;
+  }
+  .head{
+    width: 100%;
+    gap: 11px;
+  }
+
+  .delivery-option{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer{
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-section{
+    text-align: center;
+  }
+}

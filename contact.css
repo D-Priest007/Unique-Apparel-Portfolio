@@ -1,10 +1,4 @@
-/* GENERAL STYLES */
-body {
-    margin: 0; /* Remove default body margin */
-    font-family: 'Poppins', sans-serif; /* Set a modern, clean font for the body */
-    background-color: #ffffff; /* Default background color */
-    color: #333; /* Default text color */
-}
+
 
 /* NEWSLETTER SECTION STYLES */
 .newsletter-section {

@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +15,7 @@ body {
 }
 
 .background-wrapper {
-    background: url(Assets/image\ 4.png) no-repeat;
+    background: url(Assets/image\ 22.png) no-repeat;
     background-size: cover;
     background-attachment: fixed;
     margin: 0;
@@ -53,6 +57,21 @@ body {
     margin: 20px;
     width: 95%;
     backdrop-filter: blur(10px);
+}
+
+.active-tab {
+    position: relative;
+}
+
+.active-tab div {
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: #A8BBA3;
+    transition: width 0.3s ease;
+    border-radius: 50px;
 }
 
 .logo {
@@ -170,7 +189,6 @@ body {
     max-width: 670px;
     text-align: center;
     margin: 0 auto;
-    text-align: justify;
     text-transform: capitalize;
     font-size: 15px;
     margin-top: 15px;
@@ -183,6 +201,7 @@ body {
     max-width: 1400px;
     text-align: center;
     align-items: center;
+    margin-top: -30px;
 }
 
 .image-grid {
@@ -305,7 +324,6 @@ body {
     align-items: center;
     justify-content: space-between;
     text-align: center;
-    /* margin-top: 50px; */
     margin: 0 auto;
     width: 80%;
     padding-top: 50px;
@@ -362,7 +380,38 @@ body {
     color: white;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 770px) {
+
+    .background-wrapper {
+        background-size: cover;
+        height: 80vh;
+        background-position: center top;
+        background-attachment: scroll;
+    }
+
+    .footnote {
+        max-height: 20vh;
+    }
+
+    .footnote .fn-div div p {
+        font-size: 15px;
+    }
+
+    .discover p {
+        text-align: center;
+    }
+
+    .trending .image-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .categories .image-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .nav {
         margin: 5px;
         margin-left: 12px;
@@ -466,5 +515,257 @@ body {
     .free-card {
         width: 50%;
         margin: 0 auto;
+    }
+}
+
+header h1 {
+    font-family: 'Lora', serif;
+    font-size: 2.5rem;
+    letter-spacing: 0.2em;
+    text-align: left;
+    margin-bottom: 2rem;
+    font-weight: 400;
+}
+
+/* Main content area styling */
+.about-page-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    background-color: #7A8774;
+}
+
+/* "About Us" section styling */
+.about-section {
+    display: grid; /* Use CSS Grid for a two-column layout */
+    grid-template-columns: 1fr 1fr; /* Create two columns of equal width */
+    gap: 2rem;
+    align-items: center;
+}
+
+/* "About Us" text block styling */
+.about-text {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.about-text p {
+    margin-bottom: 1.5rem;
+}
+
+/* Image gallery container styling */
+.image-gallery {
+    display: grid; /* Use CSS Grid for the images */
+    grid-template-columns: repeat(3, 1fr); /* Create three equal columns for the images */
+    gap: 1rem; /* Space between images */
+}
+
+/* Common styling for all gallery images */
+.gallery-img {
+    width: 100%; /* Make image fill the grid cell */
+    height: 350px; /* Set a fixed height for all images */
+    object-fit: cover; /* Ensure images cover the area without distortion */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Testimonials section container styling */
+.testimonials-section {
+    display: grid; /* Use CSS Grid for a responsive card layout */
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+    gap: 1.5rem;
+}
+
+/* Individual testimonial card styling */
+.testimonial-card {
+    background-color: #FFFFFF; /* Changed to pure white */
+    color: #555; /* Lighter text color for the quote */
+    border-radius: 15px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Star rating styling */
+.stars {
+    color: #333; /* Darker color for stars for contrast */
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+/* Quote text styling */
+.quote {
+    font-style: italic;
+    flex-grow: 1; /* Pushes the author to the bottom */
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+/* Author section styling (image and name) */
+.author {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: bold;
+    color: #333; /* Darker color for the author name */
+}
+
+.author img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+/* Responsive Design using Media Queries */
+@media (max-width: 992px) {
+    .about-section,
+    .testimonials-section {
+        grid-template-columns: 1fr; /* Stack columns on top of each other */
+    }
+}
+
+@media (max-width: 768px) {
+
+    header h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .image-gallery {
+        /* On mobile, keep the 3-column grid for images as it looks good, but you could change it */
+        gap: 0.5rem; /* Reduce gap on smaller screens */
+    }
+
+    .gallery-img {
+        height: 250px; /* Reduce image height on smaller screens */
+    }
+}
+
+
+/* Main container for the whole page */
+.about-page-container {
+    margin: 0 auto; /* Center the container on the page */
+    padding: 80px 40px; /* Add padding on the top/bottom and sides */
+    margin-top: 20px;
+}
+
+/* ABOUT SECTION STYLES */
+.about-section {
+    display: flex; /* Use flexbox to create a two-column layout */
+    align-items: center; /* Vertically align the content in the center */
+    gap: 60px; /* Create space between the text and image columns */
+    margin-bottom: 10px; /* Add space below the about section, before the testimonials */
+    margin-top: -30px; /* Adjust the top margin to pull the section up */
+}
+
+/* Left column: Text content */
+.about-text-content {
+    flex: 1; /* Allow this column to take up available space */
+    color: #e0e0e0; /* Light text color for readability on the dark background */
+}
+
+.about-heading {
+    font-family: 'DM Serif Display', serif; /* Use the elegant serif font for the heading */
+    font-size: 36px;
+    color: #ffffff; /* White color for the main heading */
+    letter-spacing: 2px; /* Add some space between letters */
+    margin-bottom: 30px;
+}
+
+.about-text-content p {
+    font-size: 16px;
+    line-height: 1.8; /* Generous line height for better readability */
+    margin-bottom: 20px;
+}
+
+/* Right column: Image gallery */
+.about-image-gallery {
+    flex: 1; /* Allow this column to take up available space */
+    display: grid; /* Use CSS Grid for a complex image layout */
+    grid-template-columns: repeat(2, 1fr ); /* Create a 2-column grid */
+    gap: 15px; /* Space between the images */
+    align-items: center; /* Align items in the center of their grid cells */
+}
+
+.gallery-image-wrapper {
+    border-radius: 12px; /* Rounded corners for the images */
+    overflow: hidden; /* Ensure the images stay within the rounded corners */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+.gallery-image-wrapper img {
+    width: 100%; /* Make images fill their container */
+    height: 100%;
+    object-fit: cover; /* Ensure images cover the area without distortion */
+    display: block; /* Remove any extra space below the image */
+}
+
+.img-1 {
+    height: 400px;
+    border-radius: 12px;
+}
+
+.img-3 {
+    height: 400px;
+    border-radius: 12px;
+}
+
+
+
+/* TESTIMONIALS SECTION STYLES */
+.testimonials-section {
+    display: grid; /* Use CSS Grid for the card layout */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+    gap: 30px; /* Space between the testimonial cards */
+}
+
+.testimonial-card {
+    background-color: #ffffff; /* White background for the cards */
+    padding: 30px; /* Space inside each card */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+}
+
+.testimonial-stars {
+    color: #1a1a1a; /* Black color for the stars */
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.testimonial-quote {
+    font-style: italic; /* Italicize the quote text */
+    color: #555555; /* Dark gray for the quote */
+    line-height: 1.6;
+    margin: 0 0 20px 0; /* Reset default blockquote margin and add space below */
+    flex-grow: 1; /* Allow the quote to take up available space, ensuring cards have equal height */
+}
+
+.testimonial-author {
+    display: flex; /* Align avatar and name side-by-side */
+    align-items: center;
+    font-weight: 500;
+    color: #333333;
+    font-style: normal; /* Reset italic style for the author's name */
+}
+
+.author-avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%; /* Make the avatar image circular */
+    margin-right: 12px; /* Space between avatar and name */
+    object-fit: cover;
+}
+
+/* RESPONSIVE DESIGN */
+/* On smaller screens, stack the about section columns vertically */
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column; /* Change flex direction to stack columns */
+    }
+    .about-page-container {
+        padding: 40px 20px; /* Reduce padding on smaller screens */
     }
 }
